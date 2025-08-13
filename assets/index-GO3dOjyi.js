@@ -271,7 +271,7 @@ Please change the parent <Route path="${w}"> to <Route path="${w==="/"?"*":`${w}
   height: 90vh;
   border-radius: 20px;
   @media (max-width: 594px){
-    height: 80vh;
+    height: 75vh;
   }
 `,iD=Xe.div`
   font-size: ${jn(36,18)};
@@ -281,6 +281,8 @@ Please change the parent <Route path="${w}"> to <Route path="${w==="/"?"*":`${w}
   gap: 0.5rem;
   padding: 1rem;
   border-radius: 12px;
+  background: rgba(232, 232, 232, 0.9);
+  
 
 `,oD=Xe.div`
   grid-column: 1 / -1;
@@ -382,11 +384,10 @@ Please change the parent <Route path="${w}"> to <Route path="${w==="/"?"*":`${w}
   cursor: pointer;
   background: none;
   border: none;
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin-bottom: 0.5rem;
   display: flex;
   align-items: center;
-  gap: 0.3rem;
   color: #333;
 
   &:hover {
@@ -434,7 +435,7 @@ Please change the parent <Route path="${w}"> to <Route path="${w==="/"?"*":`${w}
   overflow-x: auto;
   overflow-y: hidden;
   scroll-behavior: smooth;
-  padding-bottom: 0.7rem;
+  padding-bottom: 1rem;
   @media (max-width: 768px) {
     padding-bottom: 0.3rem;
   }
