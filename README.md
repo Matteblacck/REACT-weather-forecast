@@ -1,2 +1,2 @@
-Online demo: (https://matteblacck.github.io/REACT-weather-forecast/)
+Online demo: https://matteblacck.github.io/REACT-weather-forecast/
 
