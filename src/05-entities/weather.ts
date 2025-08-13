@@ -8,17 +8,34 @@ export interface HourlyWeather {
     wind_kph?: number;   // Скорость ветра в км/ч (опционально)
     humidity?: number;   // Влажность в % (опционально)
   }
-  export interface DayForecast {
+  
+  export interface FullDayForecast {
     date: string; // например, "2025-06-25"
     day: {
       avgtemp_c: number;
       maxtemp_c: number;
       mintemp_c: number;
       maxwind_kph: number;
+      minwind_kph: number;
       avghumidity: number;
       condition: {
         text: string;
         icon: string; // уже абсолютная ссылка
       };
+      pressure_mb?: number;        // давление в миллибарах (необязательно)
+      pressure_in?: number;        // давление в дюймах ртутного столба (необязательно)
+      daily_chance_of_rain?: number;   // вероятность дождя в % (необязательно)
+      daily_chance_of_snow?: number;   // вероятность снега в % (необязательно)
+      uv?: number;                 // индекс ультрафиолета (необязательно)
+      totalprecip_mm?: number;
+      cloudcover?: number;  // Добавлено: облачность в процентах (необязательно)
     };
+  }
+  export interface DayForecast extends FullDayForecast {
+    date: string; // например, "2025-06-25"
+    astro: {
+      sunrise: number;
+      sunset: number
+    }
+  
   }

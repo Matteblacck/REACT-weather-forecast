@@ -15,12 +15,9 @@ const Card = styled.div`
   background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(10px);
   padding: 1.5rem 1rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.2);
   text-align: center;
   transition: all 0.3s ease;
   cursor: pointer;
-  border: 1px solid rgba(255, 255, 255, 0.3);
  
 
   h3 {

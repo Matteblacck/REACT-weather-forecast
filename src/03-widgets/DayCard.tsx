@@ -8,6 +8,7 @@ interface DayCardProps {
   icon: React.ReactNode;
   wind: string;
   humidity: string;
+  onClick?: () => void
 }
 
 const Card = styled.div`
@@ -28,12 +29,14 @@ const Card = styled.div`
     padding: 1rem 0.75rem;
     h3 {
     margin-bottom: 3px;
-    font-size: 1rem;
+    font-size: 0.5rem;
     font-weight: 600;
     color: #2c3e50;
+    
   }
+  
   .icon {
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin: 0 0 12px 0;
     line-height: 1;
   }
@@ -80,9 +83,9 @@ const Card = styled.div`
   }
 `;
 
-export default function DayCard({ day, mintemp, maxtemp, icon, wind, humidity }: DayCardProps) {
+export default function DayCard({ day, mintemp, maxtemp, icon, wind, humidity, onClick }: DayCardProps) {
     return (
-      <Card>
+      <Card onClick={onClick}>
         <h3>{day.toUpperCase()}</h3>
         <div className="icon">
           {icon}
